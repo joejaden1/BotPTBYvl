@@ -1,6 +1,6 @@
 from telegram.ext import Updater, CommandHandler
 from db import init_db
-from modules.binance_trade import trade
+from modules_binance_trade import trade
 from config import TELEGRAM_TOKEN
 
 def main():
