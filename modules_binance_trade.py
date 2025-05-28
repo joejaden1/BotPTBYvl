@@ -1,8 +1,8 @@
 from binance.client import Client
-    from telegram import Update
-    from telegram.ext import CallbackContext
-    from config import BINANCE_API_KEY, BINANCE_API_SECRET
-    from db import log_trade
+from telegram import Update
+from telegram.ext import CallbackContext
+from config import BINANCE_API_KEY, BINANCE_API_SECRET
+from db import log_trade
 
     client = Client(api_key=BINANCE_API_KEY, api_secret=BINANCE_API_SECRET)
 
