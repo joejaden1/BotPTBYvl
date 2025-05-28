@@ -4,7 +4,8 @@ from modules.binance_trade import trade
 
 def start(update, context):
     update.message.reply_text("مرحبًا! أنا بوت التداول. استخدم الأمر /trade لتنفيذ صفقة.")
-
+from db import init_db
+init_db()
 def main():
     updater = Updater(token=TELEGRAM_TOKEN, use_context=True)
     dp = updater.dispatcher
