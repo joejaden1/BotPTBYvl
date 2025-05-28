@@ -1,6 +1,6 @@
 from telegram.ext import Updater, CommandHandler
 from config import TELEGRAM_TOKEN
-from modules.binance_trade import trade
+from binance_trade import trade
 
 def start(update, context):
     update.message.reply_text("مرحبًا! أنا بوت التداول. استخدم الأمر /trade لتنفيذ صفقة.")
