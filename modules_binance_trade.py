@@ -1,4 +1,4 @@
-rom binance.client import Client
+from binance.client import Client
 from telegram import Update
 from telegram.ext import CallbackContext
 from config import BINANCE_API_KEY, BINANCE_API_SECRET
