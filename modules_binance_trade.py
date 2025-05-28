@@ -4,7 +4,7 @@ from telegram.ext import CallbackContext
 from config import BINANCE_API_KEY, BINANCE_API_SECRET
 from db import log_trade
 
-    client = Client(api_key=BINANCE_API_KEY, api_secret=BINANCE_API_SECRET)
+client = Client(api_key=BINANCE_API_KEY, api_secret=BINANCE_API_SECRET)
 
     def trade(update: Update, context: CallbackContext):
         if len(context.args) < 3:
@@ -32,4 +32,3 @@ from db import log_trade
             )
         except Exception as e:
             update.message.reply_text(f"حدث خطأ أثناء تنفيذ الصفقة: {e}")
-	
