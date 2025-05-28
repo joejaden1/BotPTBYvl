@@ -1,18 +1,19 @@
 from telegram.ext import Updater, CommandHandler
-from db import init_db
-from modules_binance_trade import trade
 from config import TELEGRAM_TOKEN
+from modules.binance_trade import trade
+
+def start(update, context):
+    update.message.reply_text("مرحبًا! أنا بوت التداول. استخدم الأمر /trade لتنفيذ صفقة.")
 
 def main():
-    init_db()
-    updater = Updater(TELEGRAM_TOKEN, use_context=True)
+    updater = Updater(token=TELEGRAM_TOKEN, use_context=True)
     dp = updater.dispatcher
 
+    dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("trade", trade))
-# يمكنك إضافة المزيد من الأوامر هنا
 
     updater.start_polling()
     updater.idle()
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
