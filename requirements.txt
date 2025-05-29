@@ -1,4 +1,3 @@
 python-telegram-bot==13.15
 python-binance
 APScheduler
-modules_binance_trade.py
