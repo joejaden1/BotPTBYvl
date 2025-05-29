@@ -37,7 +37,7 @@ def webhook():
 @app.before_first_request
 def setup_webhook():
     init_db()  # initialize your DB
-    app_url = f"https://your-render-app.onrender.com/{TELEGRAM_TOKEN}"  # 🔁 replace with your real URL
+    app_url = f"https://botptbyvl.onrender.com/{TELEGRAM_TOKEN}"  
     bot.set_webhook(url=app_url)
 
 if __name__ == "__main__":
